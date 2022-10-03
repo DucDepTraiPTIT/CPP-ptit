@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-long long gcd(long long a, long long b){
+using ll = long long;
+ll gcd(ll a, ll b){
 	if(b == 0) return a;
 	return gcd(b, a % b);
 }
-long long lcm(long long a, long long b){
+ll lcm(ll a, ll b){
 	return (a / gcd(a, b)) * b;
 }
-long long kq(long long n){
-	long long a = 1;
+ll kq(ll n){
+	ll a = 1;
 	for(int i = 1 ;i <= n;i++){
 	a = lcm(a, i);
 	}
@@ -18,11 +19,10 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-   long long n;
+    ll n;
     cin >> n;
     cout << kq(n) << endl;
-	}
-
+}
 }
 	
 	
