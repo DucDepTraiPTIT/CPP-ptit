@@ -1,0 +1,28 @@
+#include<bits/sdtc++.h>
+using namespace std;
+int check(int n){
+    int c = 0, l = 0;
+    while(n != 0){
+        int r = n % 10;
+        if(r % 2 == 0) ++c;
+        else ++l;
+        n /= 10;
+    }
+    if(c == l) return true;
+    return false;
+}
+int main(){
+    int n;
+    cin >> n;
+    int dem = 0;
+    for(int i = pow(10, n - 1); i < pow(10, n);i++){
+        if(check(i)){
+        cout << i << " ";
+            dem++;
+        }
+        if(dem == 10){
+        cout << endl;
+            dem = 0;
+        }
+    }
+}
