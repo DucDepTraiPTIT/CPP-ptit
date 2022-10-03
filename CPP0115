@@ -1,4 +1,4 @@
-#include<bits/sdtc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 void solve(int n){
     for(int i = 2 ; i <= sqrt(n);i++){
