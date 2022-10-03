@@ -1,0 +1,44 @@
+// Cach 1 : 
+#include<bits/sdtc++.h>
+using namespace std;
+bool check(long long n){
+     while(n >= 10){
+         int a = n % 10;
+         int b = (n / 10) % 10;
+         if(abs(a - b) != 1) return false;
+         n /= 10;
+     }
+    return true;
+}
+
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        long long n;
+        cin >> n;
+        if(check(n)) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
+}
+// Cach 2:
+#include<bits/stdc++.h>
+using namespace std;
+bool check(string s){
+    for(int i = 1 ; i < s.size();i++){
+        if(abs((s[i-1] - '0') - (s[i] - '0')) != 1) return false;
+    }
+    return true;
+}
+int main(){
+    int t;
+    cin >> t;
+    cin.ignore();
+    string s;
+    while(t--){
+        cin >> s;
+        if(check(s)) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
+  
+}
