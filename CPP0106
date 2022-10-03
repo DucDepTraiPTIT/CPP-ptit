@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+bool tn(string s){
+     string tmp = s;
+     reverse(tmp.begin(), tmp.end());
+     return tmp == s;
+}
+int main(){
+     int t;
+     cin >> t;
+     cin.ignore();
+     string s;
+     while(t--){
+     cin >> s;
+     if(tn(s)) cout << "YES" << endl;
+     else cout << "NO" << endl;
+     }
+}
+// Cach 2: 
+// #include<bits/sdtc++.h>
+// using namespace std;
+// bool check(int n){
+//     while(n != 0){
+//         int r = n % 10;
+//         if(r % 10 != 0 && r % 10 != 6 && r % 10 != 8) return false;
+//         n /= 10;
+//     }
+//     return true;
+// }
+// int main(){
+//     int t;
+//     cin >> t;
+//     while(t--){
+//         int n;
+//         cin >> n;
+//         if(check(n)) cout << "YES" << endl;
+//         else cout << "NO" << endl;
+//     }
+// }
