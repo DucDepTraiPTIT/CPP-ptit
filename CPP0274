@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define F(i, a, b) for(int i = a ; i <= b;++i)
+#define FOR(i, a, b) for(int i = a ; i >= b;--i)
+using namespace std;
+int a[1000005];
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int dem[1000005] = {};
+        int n;
+        cin >> n;
+        F(i, 1, n){
+            cin >> a[i];
+            ++dem[a[i]];
+        }
+        int cnt = 0;
+        F(i, 1, n){
+            if(dem[a[i]] > 1){
+                cnt += dem[a[i]];
+                dem[a[i]] = 0;
+            }
+        }
+        cout << cnt << endl;
+    }
+    return 0;
+}
