@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define ll long long
+#define FOR(i, a, b) for(int i = a; i <= b; ++i)
+using namespace std;
+int a[100005];
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        int min_pos = INT_MAX;
+        FOR(i, 1, n)
+        {
+            cin >> a[i];
+        }
+        sort(a + 1, a + n + 1);
+        FOR(i, 2, n){
+            min_pos = min(min_pos, a[i] - a[i - 1]);
+        }
+        cout << min_pos;
+        cout << endl;
+    }
+}
