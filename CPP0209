@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+#define ll long long
+#define FOR(i, a, b) for(int i = a; i <= b; ++i)
+using namespace std;
+int a[100005];
+int main()
+{
+    int t, n, k, l, r;
+    cin >> t;
+    while(t--)
+    {
+        cin >> n >> k;
+        FOR(i, 1, n) cin >> a[i];
+        while(k--)
+        {
+            ll sum = 0;
+            cin >> l >> r;
+            FOR(i, l, r) sum += a[i];
+            cout << sum << endl;
+        }
+    }
+    return 0;
+}
