@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#define F(i, a, b) for(int i = a ; i <= b;++i)
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n, m;
+        cin >> n >> m;
+        int a[n + 1][m + 1], b[n + 1][m + 1];
+        F(i, 1, n) F(j, 1, m){
+            cin >> a[i][j];
+            b[i][j] = a[i][j];
+        }
+        F(i, 1, n) F(j, 1, m){
+            if(a[i][j] == 1){
+                F(k, 1, n){
+                    b[k][j] = 1;
+                }
+                F(k, 1, m){
+                    b[i][k] = 1;
+                }
+            }
+        }
+        F(i, 1, n){
+        F(j, 1, m) {
+        cout << b[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    }
+    return 0;
+}
