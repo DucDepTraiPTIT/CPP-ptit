@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int t;
+    cin>>t;
+    while(t--) {
+    cin.ignore();
+    string s;
+    getline(cin, s);
+    set<char> se;
+    int k;
+    cin >> k;
+    for(char x : s)
+    {
+    se.insert(x);
+    }
+        if(26 - se.size() <= k ) cout << "1\n" << endl;
+    else cout << "0" << endl;
+    }
+    
+}
