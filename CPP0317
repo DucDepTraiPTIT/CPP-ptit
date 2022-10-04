@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool tn(string &s){
+    int mid = (int)s.length() / 2;
+    for(int i = 0 ; i < mid;i++) if(s[i] != s[s.length() - i - 1]) return false;
+    return true;
+}
+bool chan(string &s){
+    for(int i = 0 ; i < s.length();i++) if(s[i] % 2 == 1) return false;
+    return true;
+}
+int main(){
+    int t;
+    cin >> t;
+    string s;
+    while(t--){
+        cin >> s;
+        if(tn(s) && chan(s)) cout << "YES" << endl;
+        else cout << "NO" << endl;
+        
+    }
+    return 0;
+}
