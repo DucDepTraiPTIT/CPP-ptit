@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define F(i, a, b) for(int i = a ; i <= b;++i)
+#define FOR(i, a, b) for(int i = a ; i >= b;--i)
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        int a[n + 1][n + 1];
+        F(i, 1, n) F(j, 1, n){
+            cin >> a[i][j];
+        }
+        F(i, 1, n){
+            if(i % 2 == 0){
+                FOR(j, n, 1){
+                    cout << a[i][j] << ' ';
+                }
+            }
+            else{
+                F(j, 1, n) cout << a[i][j] << ' ';
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
